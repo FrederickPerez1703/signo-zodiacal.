@@ -1,0 +1,74 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Signos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 style="margin:5%; text-align:center ;">  Bienvenido </h1>
+
+    
+
+        <div style="background-color:cadetblue; width:60%; height:50%; margin:auto; padding:69px; opacity:0.9">
+
+            <h2 style="text-align:center; color:black; height:auto;">Signo Zodiacoles </h2>
+            <br />
+
+            <form action="/Home/Vista" method="post">
+
+                <div style="width:auto;">
+
+
+                    <div>
+                        <label class="text-justify" style="padding:0px; color:black;">Inserte el Dia de nacimiento:</label>
+
+                        <input style="padding-left:5px;" size="8" ; type="number" name="Dia" required autofocus placeholder="inserte el dia" />  <span> @ViewBag.msj</span>
+                    </div>
+
+                    <div style="padding-top:30px;">
+                        <label class="text-justify" style="padding-top:0px; color:black;">Inserte el mes de nacimiento:</label>
+                        <input size="6" ; type="number" name="mes" required placeholder="inserte el mes" /> <span>@ViewBag.msj</span>
+                    </div>
+                    <br />
+
+                    <div>
+                        <label style="color:black;">Signo zodiacal : @ViewData["Signo"]</label>
+                    </div>
+                    <br />
+                    <div>
+                        <label style="color:black;"> Astro: @ViewData["Astro"]  </label>
+                    </div>
+                    <h5 class="text-justify" style="color:black"> No puede dejar ninguna campo vacio tampoco poner numeros negativos </h5>
+                    <div>
+                        <br />
+                        <hr />
+                    </div>
+                    <div style="padding-top:-50px; width:30rem; margin:auto;">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+                    </div>
+
+
+                </div>
+
+
+
+            </form>
+
+
+
+        </div>
+          
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
